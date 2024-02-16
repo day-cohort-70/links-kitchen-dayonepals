@@ -27,7 +27,10 @@ function cook() {
     }
 }
 }
+cook()
 */
+
+//here is another way to write this! 
 
 const cook = (ingredients) => {
     for (i = 0; i < ingredients.length; i++) {
@@ -53,7 +56,7 @@ const cook = (ingredients) => {
 const newRecipes = cook(materials)
 
 
-//cook()
+
 
 
 
