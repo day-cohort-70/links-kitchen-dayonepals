@@ -3,37 +3,51 @@ const materials = ['Hylian Rice', 'Big Hearty Truffle', 'Tabantha Wheat', 'Raw P
 
 const meals = []
 
-const cook = (firstIngredient, secondIngredient) => {
-    if (firstIngredient === 'Hylian Rice' && secondIngredient === 'Big Hearty Truffle') {
+function cook(firstIngredient, secondIngredient, thirdIngredient) {
+    for (i = 0; i < materials.length; i++) {
+    if (firstIngredient[i] === 'Hylian Rice' && secondIngredient[i] === 'Big Hearty Truffle') {
         meals.push('Mushroom Rice Balls')       
-    } if (firstIngredient === 'Hateno Cheese' && secondIngredient === 'Bird Egg') {
+    } if (firstIngredient[i] === 'Hateno Cheese' && secondIngredient[i] === 'Bird Egg') {
         meals.push('Cheezy Omelette')
-    } if (firstIngredient === 'Tabantha Wheat' && secondIngredient === 'Hateno Cheese') {
+    } if (firstIngredient[i] === 'Tabantha Wheat' && secondIngredient[i] === 'Hateno Cheese') {
         meals.push('Cheezy Hylian Pizza')
-    } if (firstIngredient === 'Hylian Rice' && secondIngredient === 'Raw Prime Meat') {
+    } if (firstIngredient[i] === 'Hylian Rice' && secondIngredient[i] === 'Raw Prime Meat') {
         meals.push('Prime Meat and Rice Bowl')
-    }
-
+    } if (firstIngredient[i] === 'Bird Egg' && secondIngredient[i] === 'Fresh Milk' && thirdIngredient[i] === 'Cane Sugar') {
+        meals.push('Egg Pudding')
+    }        
 }
+}
+cook()
+
+materials.push('Fresh Milk', 'Cane Sugar', 'Goat Butter', 'Raw Bird Thigh')
+//console.log(materials)
+
+//function cook() {
+//    for (i = 0; i < materials.length; i++) {
+//        if (materials[i] === 'Hylian Rice' && materials[i + 1] === 'Big Hearty Truffle') {
+//            meals.push('Mushroom Rice Balls')         
+//    }   else if (materials[i] === 'Hateno Cheese' && materials[i + 1] === 'Bird Egg') {
+//            meals.push('Cheezy Omelette')
+//    }   else if (materials[i] === 'Tabantha Wheat' && materials[i + 1] === 'Hateno Cheese') {
+//            meals.push('Cheezy Hylian Pizza')
+//        }
+//}
+//}
 
 
-cook(materials[0], materials[1])
-cook(materials[4], materials[5])
-cook(materials[2], materials[4])
-cook(materials[0], materials[3])
+
 
 
 
 console.log('MEALS:')
 console.log('---------------')
-for (const meal of meals) {
-    console.log(meals)
-}
+console.log(meals)
 
 
 //TO DO:
 
-//3. Add new ingredients to materials array
+
 //4. Update existing function to include more ingredient parameters
 //5. Add second set of new recipes to meals array
 
